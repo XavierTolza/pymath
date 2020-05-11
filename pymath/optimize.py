@@ -11,3 +11,7 @@ def argmax_interpolated(arr):
     y1, y2, y3 = _arr.T.ravel()[index]
     frac = (y1 - y3) / (2 * (y3 - 2 * y2 + y1))
     return np.reshape(argmax + frac, arr.shape[1:])
+
+
+def argmin_interpolated(arr):
+    return argmax_interpolated(-arr)
